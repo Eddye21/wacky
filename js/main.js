@@ -19,7 +19,6 @@ function mostrarProductos() {
     listaProductos.innerHTML = '';
     productos.forEach(producto => {
         const div = document.createElement('div');
-        // div.classList.add('producto');
         div.innerHTML = `
             <span>${producto.nombre} - $${producto.precio}</span>
             <button onclick="agregarAlCarrito(${producto.id})">Agregar</button>
