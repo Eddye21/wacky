@@ -1,0 +1,123 @@
+/* Reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.conteiner-principal{
+    background: rgb(125,230,223);
+    background: linear-gradient(180deg, rgba(125,230,223,1) 0%, rgba(212,209,209,1) 14%, rgba(0,0,0,1) 100%); 
+    height: 100%;  
+}
+
+.carrito-conteiner-page{
+    background: rgb(125,230,223);
+    background: linear-gradient(180deg, rgba(125,230,223,1) 0%, rgba(212,209,209,1) 14%, rgba(30,30,30,1) 100%); 
+    height: 100%;  
+    width: 100%;
+}
+
+
+.section-principal{
+    display: flex;
+    justify-content: space-evenly;
+    height: 20vh;
+    align-items: center;
+    background-color: transparent;
+    width: 90%;
+    margin-left: 50px;
+}
+
+.logo-img-principal{
+    padding-top: 2%;
+    margin-left: 10%;
+    display: flex;
+}
+
+.title{
+    padding-left: 5px;
+    color: #1e1e1e;
+}
+
+.navbar-conteiner{
+    width: 180px;
+    display: flex;
+    column-gap: 25px;
+    padding-top: 35px;
+    list-style: none;
+}
+
+.subtitle{
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.title-products{
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.card-conteiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 4rem;
+    column-gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.btn.btn-primary{
+    background-color: #789d9d;
+    border-color: #d4d1d1;
+    color: #d4d1d1;
+}
+
+.btn.btn-primary:hover{
+    background-color:  #d4d1d1;
+    border-color: rgb(125, 230, 223);
+    color: #1e1e1e;
+}
+
+.card-body, .card-img-top{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: #d4d1d1;
+    box-shadow: -11px 9px 5px 0px rgba(212,209,209,0.23);
+    -webkit-box-shadow: -11px 9px 5px 0px rgba(212,209,209,0.23);
+    -moz-box-shadow: -11px 9px 5px 0px rgba(212,209,209,0.23);
+}
+
+.footer-title{
+    color: #d4d1d1;
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.footer-carrito{
+    padding-top: 70rem;
+}
+
+.carrito{
+    padding-left: 4rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.principal-section{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.counter-container{
+    padding-left: 5rem;
+}
+
+#trash-icon{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 4rem;
+    padding-top: 6rem;
+}
