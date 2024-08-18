@@ -17,7 +17,7 @@ function pagoAceptado () {
             title: "Pago recibido",
             text: "Tus articulos estan en camino",
             confirmButtonText: "Confirmar",
-            footer: '<a href="#">Ver factura</a>'
+            footer: '<a href="./factura.html">Ver factura</a>'
         }).then((result) => {
             if (result.isConfirmed){
                 location.reload()
@@ -34,8 +34,7 @@ function mostrarCarrito() {
             const carrito = JSON.parse(carritoStorage)
             const carritoContainer = document.getElementById("carrito-lista")
 
-            carritoContainer.innerHTML = ''
-
+            carritoContainer.innerHTML = ""
             carrito.forEach(producto => {
                 const card = document.createElement("div")
                 card.className = "carrito"
@@ -63,6 +62,7 @@ function mostrarCarrito() {
                         pagoAceptado()
                     }
                 });
+
                 botonEliminar.addEventListener("click", () => {
                     const cantidadActual = parseInt(cantidadSpan.textContent)
                     if (cantidadActual > 0) {
@@ -79,6 +79,7 @@ function mostrarCarrito() {
                 }
             })
         })
+
         function actualizarTotalCarrito() {
             const total = carrito.reduce((total, producto) => {
                 const precio = parseFloat(producto.precio) || 0 
@@ -90,7 +91,7 @@ function mostrarCarrito() {
             localStorage.setItem("totalCarrito", total)
         }
     } catch (error) {
-        notificacionError()
+        notificacionError(), error
     }
     finally{
         notificacion()
@@ -103,7 +104,7 @@ function mostrarTotalGuardado() {
     const totalGuardado = localStorage.getItem("totalCarrito")
     if (totalGuardado) {
         const elementoTotal = document.querySelector("#total")
-        elementoTotal.textContent = `Total guardado: $${totalGuardado}`
+        elementoTotal.parseInt = `Total guardado: $${totalGuardado}`
     }
 }
 
