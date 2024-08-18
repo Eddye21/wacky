@@ -10,6 +10,21 @@
     color: #1e1e1e;
 }
 
+.all-icons{
+    width: 40px;
+    height: 40px;
+}
+
+.icon-card{
+    width: 60px;
+    height: 60px;
+}
+
+.icon-github{
+    width: 25px;
+    height: 25px;
+}
+
 .conteiner-principal{
     background: rgb(125,230,223);
     background: linear-gradient(180deg, rgba(125,230,223,1) 0%, rgba(212,209,209,1) 14%, rgba(0,0,0,1) 100%); 
