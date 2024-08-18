@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+.pay-a{
+    text-decoration: none;
+    color: #1e1e1e;
+}
+
 .conteiner-principal{
     background: rgb(125,230,223);
     background: linear-gradient(180deg, rgba(125,230,223,1) 0%, rgba(212,209,209,1) 14%, rgba(0,0,0,1) 100%); 
@@ -17,7 +22,6 @@
     height: 100%;  
     width: 100%;
 }
-
 
 .section-principal{
     display: flex;
@@ -67,6 +71,7 @@
     flex-wrap: wrap;
 }
 
+
 .btn.btn-primary{
     background-color: #789d9d;
     border-color: #d4d1d1;
@@ -77,6 +82,7 @@
     background-color:  #d4d1d1;
     border-color: rgb(125, 230, 223);
     color: #1e1e1e;
+    transition: 0.8s;
 }
 
 .card-body, .card-img-top{
@@ -88,17 +94,6 @@
     -webkit-box-shadow: -11px 9px 5px 0px rgba(212,209,209,0.23);
     -moz-box-shadow: -11px 9px 5px 0px rgba(212,209,209,0.23);
 }
-
-.footer-title{
-    color: #d4d1d1;
-    text-align: center;
-    margin-top: 7rem;
-}
-
-.footer-carrito{
-    padding-top: 70rem;
-}
-
 .carrito{
     padding-left: 4rem;
     display: flex;
@@ -111,13 +106,75 @@
     flex-direction: row;
     justify-content: center;
 }
-.counter-container{
-    padding-left: 5rem;
-}
 
-#trash-icon{
+#icons{
     display: flex;
     flex-direction: row-reverse;
     padding-right: 4rem;
     padding-top: 6rem;
 }
+.pay{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 15rem;
+    padding-top: 3rem;
+}
+
+.contador-producto{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.pay-button{
+    background:  #789d9d;
+    width: 15rem;
+    padding-right: 1rem;
+    border-radius: 20px;
+    margin-left: 1rem;
+    box-shadow: -14px 6px 5px -2px rgba(212,209,209,0.07);
+    -webkit-box-shadow: -14px 6px 5px -2px rgba(212,209,209,0.07);
+}
+
+.pay-button:hover{
+    background-color: transparent;
+    border: 2px solid #789d9d;
+    color:  #83f57d ;
+    transition: 0.8s;
+}
+
+.agregar, .eliminar{
+    width: 2rem;
+    border-radius: 1rem;
+}
+
+.agregar{
+    background-color: #83f57d ;
+    border: 2px solid #83f57d;
+}
+
+.eliminar{
+    background-color: #ffa4a4;
+    border: 2px solid #ffa4a4;
+}
+
+.total-container{
+    padding-top: 3rem;
+    text-align: center;
+}
+
+#total{
+    font-size: 30px;
+}
+
+.footer-title{
+    color: #d4d1d1;
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.footer-carrito{
+    padding-top: 10rem;
+}
+
+

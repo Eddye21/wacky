@@ -1,7 +1,7 @@
 
 const productos = [
     {id: 1, nombre: "Camiseta negra", precio: 12.99},
-    {id: 2, nombre: "Camiseta super nova", precio: 19.99}
+    {id: 2, nombre: "Camiseta nova", precio: 19.99}
 ];
 
 const carrito = []
@@ -13,7 +13,9 @@ function notificacion (){
         text: "Producto agregado con exito",
         className: "info",
         style: {
-        background: "linear-gradient(to right, #00b09b, #96c93d)",
+        // background: "linear-gradient(to right, #00b09b, #96c93d)",
+        background: "rgb(0,176,155)",
+        background: "linear-gradient(324deg, rgba(0,176,155,1) 0%, rgba(107,194,88,1) 18%, rgba(150,201,61,1) 36%)", 
         }
     }).showToast()
 }
@@ -42,11 +44,9 @@ function agregarAlCarrito () {
             const seleccionarProductos = productos.find(producto => producto.id == productoId)
             carrito.push(seleccionarProductos)
             notificacion()
-
             localStorage.setItem("carritoProductos", JSON.stringify(carrito))
         }
     })
 }
-
 
 
