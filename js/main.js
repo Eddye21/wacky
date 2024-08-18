@@ -2,7 +2,7 @@
 const carrito = []
 
 async function obtenerProductos() {
-    const repuesta = await fetch("db/articulos.JSON")
+    const repuesta = await fetch("../db/articulos.JSON")
     const productos = await repuesta.json();
     return productos
 }
