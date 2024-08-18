@@ -127,7 +127,8 @@
 }
 
 .pay-button{
-    background:  #789d9d;
+    background:  #83f57d;
+    border: 1px solid #83f57d;
     width: 15rem;
     padding-right: 1rem;
     border-radius: 20px;

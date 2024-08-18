@@ -1,26 +1,26 @@
 
-const productos = [
-    {id: 1, nombre: "Camiseta negra", precio: 12.99},
-    {id: 2, nombre: "Camiseta nova", precio: 19.99}
-];
-
 const carrito = []
 
-const containers = document.querySelectorAll(".card");
+async function obtenerProductos() {
+    const repuesta = await fetch("../db/articulos.JSON")
+    const productos = await repuesta.json();
+    return productos
+}
 
 function notificacion (){
     Toastify({
         text: "Producto agregado con exito",
         className: "info",
         style: {
-        // background: "linear-gradient(to right, #00b09b, #96c93d)",
         background: "rgb(0,176,155)",
         background: "linear-gradient(324deg, rgba(0,176,155,1) 0%, rgba(107,194,88,1) 18%, rgba(150,201,61,1) 36%)", 
         }
     }).showToast()
 }
+async function mostrarCarrito() {
+    const productos = await obtenerProductos()
+    const containers = document.querySelectorAll(".card")
 
-function mostrarCarrito() {
     for (let i = 0; i < containers.length; i++){
             const container = containers[i];
             const producto = productos[i];
@@ -36,7 +36,8 @@ function mostrarCarrito() {
 
 mostrarCarrito(productos)
 
-function agregarAlCarrito () {
+async function agregarAlCarrito () {
+    const productos = await obtenerProductos()
     agregarBoton = document.querySelectorAll(".btn")
     agregarBoton.forEach((boton) => {
         boton.onclick = (e) => {
